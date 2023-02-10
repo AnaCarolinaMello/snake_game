@@ -1,1 +1,1 @@
-# snake_game
+Just a snake game with turtle
