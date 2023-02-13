@@ -85,7 +85,7 @@ def food_collision():
         score += 1  # score = score + 1
         food_pos = get_random_food_pos()
         food.goto(food_pos)
-        DELAY = DELAY - 10
+        DELAY = DELAY - 2
         return True
     return False
 
@@ -104,9 +104,10 @@ def get_distance(pos1, pos2):
 
 
 def snakeStops():
-    global snake, score, food_pos
+    global snake, score, food_pos, snake_direction
     snake = [[0, 0], [20, 0], [40, 0], [60, 0]]
     score = 0
+    snake_direction = "up"
     food_pos = get_random_food_pos()
     food.goto(food_pos)
     screen.title("Press space to start")
